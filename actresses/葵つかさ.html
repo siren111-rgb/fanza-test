@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ actress }}のおすすめAV作品まとめ</title>
+  <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+
+<h1>{{ actress }}のおすすめAV作品</h1>
+
+<p>
+{{ actress }}の作品の中から、初心者向け・人気作品を中心に紹介します。
+</p>
+
+<div class="works">
+  {% for work in works %}
+    <div class="work-card">
+      <img src="{{ work.image_url }}" alt="{{ work.title }}">
+      <h3>{{ work.title }}</h3>
+      <p>ジャンル：{{ work.genre }}</p>
+      <a href="{{ work.affiliate_url }}" target="_blank">
+        FANZAで見る
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+<p class="notice">
+※18歳未満の方は閲覧できません
+</p>
+
+</body>
+</html>
